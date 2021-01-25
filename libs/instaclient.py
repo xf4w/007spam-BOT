@@ -160,7 +160,7 @@ class InstaClient:
         })
 
         try:
-            obj = res.json()
+            obj = res.S()
             if ("description" in obj and "status" in obj):
                 if (obj["status"] == "ok" and obj["description"] == "Your reports help keep our community free of spam."):
                     PrintSuccess("Complaint was successfully sent!", self.user)
